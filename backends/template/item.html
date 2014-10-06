@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>管理面板</title>
+    <link rel="stylesheet" href="../static/css/layout.css" type="text/css" media="screen" />
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery-1.5.2.min.js" type="text/javascript"></script>
+    <script src="../static/js/hideshow.js" type="text/javascript"></script>
+    <script src="../static/js/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../static/js/jquery.equalHeight.js"></script>
+    <script type="text/javascript" src="../static/js/toast.js"></script>
+</head>
+
+<body>
+    <!-- header bar -->
+    <header id="header">
+        <hgroup>
+            <h1 class="site_title">
+                <a href="javascript:void(0)">后台管理</a>
+            </h1>
+            <div class="btn_view_site">
+                <a href="/item_list/">返回首页</a>
+            </div>
+        </hgroup>
+    </header>
+    <!-- end of header bar -->
+
+    <!-- secondary bar -->
+    <section id="secondary_bar">
+        <div class="user">
+            <p>用户名称</p>
+        </div>
+    </section>
+    <!-- end of secondary bar -->
+
+    <!-- sidebar -->
+    <aside id="sidebar" class="column">
+        <h3>用户指南</h3>
+        <ul class="toggle">
+
+            <li class="icn_edit_article">
+                <a href="/itemshow/">浏览条目</a>
+            </li>
+            <li class="icn_new_article current_item">
+                <a href="/addpic/">新建条目</a>
+            </li>
+
+        <h3>管理员设置</h3>
+        <ul class="toggle">
+            <li class="icn_jump_back">
+                <a href="/logout/">注销登录</a>
+            </li>
+        </ul>
+
+        <footer>
+            <hr />
+            <p>
+                <strong>Copyright &copy; GRG</strong>
+            </p>
+        </footer>
+    </aside>
+    <!-- end of sidebar -->
+     
+       <section id = "main">
+        
+                <header>
+                    <h3 class="form_title">添加新图片</h3>
+                </header>
+
+                <div >
+                  
+                    <fieldset style="width:60%; float:left;" >    
+                   <form method = 'post' enctype="multipart/form-data" action='/backends/item/'>
+                      {{gf.as_p}}  
+                  </br>
+                     <div align = "right">   <input type="submit" value = "ok" />  </div>
+                          </form>
+                         </fieldset>
+                </div>
+
+                
+
+         </section>
+      
+   
+    <!-- end of add new article -->
+
+
+ 
+</body>
+
+</html>
